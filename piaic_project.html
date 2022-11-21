@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h3>miles to km converter</h3>
+    <h3>BMI calculator</h3>
+    <script>
+      let height = prompt("enter your height in inches: ");
+      let weight = prompt("enter your weight in pounds: ");
+      let heightInCm = height * 2.54;
+      let weightInkg = weight * 0.4535;
+      console.log(`your height in cm is: ${heightInCm}`);
+      console.log(`your weight in pounds is: ${weightInkg}`);
+      let BMI_Calculator = weightInkg / (heightInCm*10**-2)**2;
+      console.log(`your BMI is:  ${BMI_Calculator}`);
+      //miles to km calculator
+      
+      var distanceInMiles = prompt("enter your travelled distance in miles");
+      console.log("your travelled distance in miles is " + distanceInMiles);
+      function distanceInKM(distanceInMiles) {
+        console.log(distanceInMiles / 1.6);
+      }
+      distanceInKM(distanceInMiles);
+      //second method
+      let mileToKmConversionFactor = 1.6;
+      let miles = prompt("enter your distance in miles");
+      console.log(miles, "miles");
+      let km = miles / mileToKmConversionFactor;
+      console.log(km);
+      //propmt is used to take input from user...it always returns a string
+      var name = prompt("hey what is your name");
+      var firstName;
+      console.log(firstName); //this will be undefined as we have not assigned value to it.
+      firstName = "john";
+      console.log(firstName);
+      //this new value will overwrite the previous one. 
+      firstName = "alexander";
+      console.log(firstName);
+      //type of variable
+      console.log(typeof(firstName));  //type of variable can be string number null boolean undefined
+      let nameChanged = true;
+      console.log(typeof nameChanged);
+      let age = prompt("enter your age plz");
+      console.log("the age of user is " + age );
+      //logical operators 
+      //adding ! in front of any value will test its presence.
+      
+    </script>
+  </body>
+</html>

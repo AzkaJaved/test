@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //practise exrecise 3.4
+      let car = {
+        color : "black",
+        model : 2020,
+        make : "pakistan",
+        seats : 4,
+        auto_drive : true
+      }
+      //2 methods of accessing dot method , square  bracket method
+      console.log(car.model);
+
+      let colorOfCar = "color";
+      console.log(car[colorOfCar]);
+      //changing value of the property 
+      car[colorOfCar] = "white";
+      console.log(car["color"]);
+      console.log(car);
+
+
+      let variable = "make";
+      car[variable] = "india";
+      console.log(car["model"]);
+      console.log(car);
+
+      //using same variable to assign new property
+      variable = "auto_drive";
+      console.log(car[variable]);
+
+    
+      let dog = {
+        color : "blue",
+        breed : "chihuha",
+        age : 5,
+      }
+      let prop = "age";
+      console.log(dog[prop]);
+      prop = "color";
+      console.log(dog[prop]);
+      dog[variable]= "red";
+      console.log(dog['color']);
+      console.log(dog);
+
+      let numList = [1,2,3]
+      let newArray = [numList, numList, numList];
+      console.log(newArray);
+      console.log(newArray[1][1]);
+
+       let shoppingList = [];
+      shoppingList.splice(0,0,"milk","bread","apples");
+      console.log(shoppingList); 
+      shoppingList.splice(1,1,"bananas","eggs");
+      console.log(shoppingList);   
+      let removedItem = shoppingList.pop();
+      console.log(removedItem);
+      console.log(shoppingList.sort());
+      console.log(shoppingList);
+      console.log("index of milk is" , shoppingList.indexOf("milk"));
+      shoppingList.splice(1,0,"carrot","lettuce");
+      console.log(shoppingList);
+      let shoppingList_2 = ["juice" , "pop"];
+      console.log(shoppingList_2);
+      let newList = shoppingList.concat(shoppingList_2,shoppingList_2);
+      console.log(newList);
+       newList.concat(shoppingList_2);
+       console.log(newList);
+       console.log("last index of pop is: " , newList.lastIndexOf("pop"));
+      //object within object
+      const userInfo = {
+        name : "jackson",
+        address : [{
+          province : "punjab",
+          city : "bwp",
+          street : 145,
+          house_no : 7 
+        },
+        {
+          province : "sindh",
+          city : "lhr",
+          street : 245,
+          house_no : 6 
+        },
+        {
+          province : "punjab",
+          city : "rawalpindi",
+          street : 124,
+          house_no : 5 
+        }],
+        categories : ["a" , "b" , "c"],
+        canCode : true
+      }
+      //accessimg or modifying properties
+      console.log(userInfo["address"][0].city);
+       
+      console.log(userInfo.categories[1]);
+      console.log(userInfo["address"][2].province);
+
+      const theList = ['Laurence', 'Svekis', true, 35, null, undefined, 
+      {test: 'one', score: 55}, ['one', 'two']];
+      theList.shift();
+      theList.pop();
+      theList.unshift("first");
+      theList.splice(3,2,"middle","hello world");
+      theList.splice(6,1,"last");
+       console.log(theList);
+      //comapny product catalog 
+      let inventory = [];
+      let myobject_1 = {
+        name : "A",
+        model : "X",
+        cost : "100",
+        quantity : "1"
+      }
+      let myobject_2 = {
+        name : "B",
+        model : "Y",
+        cost : "200",
+        quantity : "2"
+      }
+      let myobject_3 = {
+        name : "C",
+        model : "Z",
+        cost : "300",
+        quantity : "3"
+      }
+      inventory.push(myobject_1,myobject_2,myobject_3);
+      console.log(inventory);
+      console.log(inventory[2].cost);
+      //exercise 3.5 
+      const people = {
+        friends : []
+      }
+      let myFriend_1 = {
+        firstName : "abc",
+        lastName : "d",
+        ID : "x"
+      }
+      let myFriend_2 = {
+        firstName : "efg",
+        lastName : "h",
+        ID : "y"
+      }
+      let myFriend_3 = {
+        firstName : "xyz",
+        lastName : "v",
+        ID : "z"
+      }
+      let modifiedPeople = people.friends;
+      console.log(modifiedPeople);
+      modifiedPeople.push(myFriend_1,myFriend_2,myFriend_3);
+      console.log(people);
+
+
+
+        
+    </script>
+  </body>
+</html>
